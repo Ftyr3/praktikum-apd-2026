@@ -1,7 +1,6 @@
 nama = "Daniel"
 nim = "54"
 
-
 username = input("Masukkan username: ")
 password = input("Masukkan password: ")
 
