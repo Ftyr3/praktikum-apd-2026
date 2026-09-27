@@ -13,7 +13,7 @@ if username == nama :
             print("Total point tidak boleh kurang dari 0")
         elif total_point < 100:
             print("Username:", username)
-            print("Rank saat ini: Rokie")
+            print("Rank saat ini: Rookie")
             point_berikutnya = 100 - total_point
             print("Point untuk naik ke Warrior:", point_berikutnya)
         elif total_point <= 299:
