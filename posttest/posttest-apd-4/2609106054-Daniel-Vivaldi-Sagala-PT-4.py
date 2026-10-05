@@ -112,9 +112,12 @@ else:
 
         else:
             bonus = "Tidak mendapat bonus"
-
+            
+        
+        print("")
         print("hasil distribusi")
-
+        print("")
+        
         print(f"Jenis paket: {jenis_paket}")
         print(f"Jumlah paket: {jumlah_paket}")
         print(f"Total porsi: {total_porsi} porsi")
@@ -122,3 +125,4 @@ else:
         print(f"Bonus: {bonus}")
         print("")
         print("Nikmati MBG Bergizi Gratis Los Pollos Hermanos!!11!!")
+        print("")
