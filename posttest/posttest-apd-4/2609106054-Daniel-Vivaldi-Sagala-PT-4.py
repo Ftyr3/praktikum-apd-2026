@@ -23,9 +23,9 @@ while percobaan_login < 3:
         print("sisa percobaan:", 3 - percobaan_login)
         continue
 
-    if username.lower() != nama.lower and password != nim:
+    if username.lower() != nama.lower() and password != nim:
         print("username dan password salah!")
-    elif username.lower() != nama.lower:
+    elif username.lower() != nama.lower():
         print("username salah!")
     elif password != nim:
         print("password salah")
