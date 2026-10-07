@@ -1,24 +1,24 @@
-Perulangan For
+# Perulangan For
 batas = 5
 for i in range(batas):
 	print("Perulangan ke-", i)
 
-Penggunaan For pada List:
+# Penggunaan For pada List:
 game = ["Genshin", 7.0, True]
 for i in game:
 	print(i)
 
-Struktur Range pada For:
+# Struktur Range pada For:
 for i in range(1,10,2):
 	print(i)
 
-Penggunaan Nested For :
+# Penggunaan Nested For :
 for i in range(1, 3):# Mengontrol baris dalam tabel perkalian
 	for j in range(1, 4):# Mengontrol kolom dalam tabel perkalian
 		print(f'{i} x {j} = {i * j}')
 	print('') #biar ada jarak tiap iterasi
 
-Perulangan While
+# Perulangan While
 jawab = "ya"
 hitung = 0
 while(jawab == "ya"):
@@ -27,7 +27,7 @@ while(jawab == "ya"):
 	jawab = input("Ulang lagi tidak? ")
 print(f"Total Perulangan : {hitung}")
 
-Break
+# Break
 for i in range(10):
 	if i == 5:
 		break
@@ -59,11 +59,11 @@ while True:
 		print("angka salah")
 
 
-Continue
+# Continue
 for i in range(10):
- if i % 2 == 0:
-	continue
- print(i)
+	if i % 2 == 0:
+		continue
+	print(i)
 
 uang_saku = int(input("masukkan uang saku: "))
 
