@@ -182,7 +182,7 @@ def ubah_kendaraan(username, role):
         merek = input("Merek baru: ").strip()
         tahun_input = input("Tahun baru: ").strip()
 
-        if pemilik_baru == "" or merek_baru == "":
+        if pemilik == "" or merek == "":
             raise ValueError("Data tidak boleh kosong.")
 
         if jenis not in ("Mobil", "Motor"):
