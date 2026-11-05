@@ -14,7 +14,7 @@ def cari_kendaraan(id_kendaraan):
 def validasi_tahun(tahun):
     try:
         tahun = int(tahun)
-        return 1899 < tahun <= 2676
+        return 1899 < tahun <= datetime.now().year
     except (ValueError, TypeError):
         return False
 
@@ -37,17 +37,32 @@ def tampilkan_kendaraan():
         print("Belum ada data kendaraan.")
         return
 
-    for id_kendaraan, data in data_kendaraan.items():
-        print("------------------------------------")
-        print("ID           :", id_kendaraan)
-        print("Nomor Plat   :", data["plat"])
-        print("Nama Pemilik :", data["pemilik"])
-        print("Jenis        :", data["jenis"])
-        print("Merek        :", data["merek"])
-        print("Tahun        :", data["tahun"])
-        print("Input Oleh   :", data["username"])
+    tabel = PrettyTable()
 
-    print("------------------------------------")
+    tabel.field_names = [
+        "ID",
+        "Nomor Plat",
+        "Nama Pemilik",
+        "Jenis",
+        "Merek",
+        "Tahun",
+        "Input Oleh"
+    ]
+
+    for id_kendaraan, data in data_kendaraan.items():
+        tabel.add_row([
+            id_kendaraan,
+            data["plat"],
+            data["pemilik"],
+            data["jenis"],
+            data["merek"],
+            data["tahun"],
+            data["username"]
+        ])
+
+    tabel.align = "l"
+    print(tabel)
+
     daftar_id = list(data_kendaraan.keys())
     jumlah_rekursif = hitung_kendaraan_rekursif(daftar_id)
     print("Jumlah :", jumlah_rekursif)
@@ -179,12 +194,22 @@ def hapus_kendaraan(username, role):
             raise ValueError("Anda tidak memiliki akses.")
 
         print("Data yang akan dihapus:")
-        print("ID           :", id_kendaraan)
-        print("Nomor Plat   :", data["plat"])
-        print("Nama Pemilik :", data["pemilik"])
-        print("Jenis        :", data["jenis"])
-        print("Merek        :", data["merek"])
-        print("Tahun        :", data["tahun"])
+        tabel = PrettyTable()
+        tabel.field_names = [
+            "ID", "Nomor Plat", "Pemilik",
+            "Jenis", "Merek", "Tahun"
+        ]
+
+        tabel.add_row([
+            id_kendaraan,
+            data["plat"],
+            data["pemilik"],
+            data["jenis"],
+            data["merek"],
+            data["tahun"]
+        ])
+
+        print(tabel)
         konfirmasi = input("Yakin hapus? (y/n): ").strip().lower()
 
         if konfirmasi == "y":

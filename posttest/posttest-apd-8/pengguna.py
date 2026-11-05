@@ -6,15 +6,28 @@ from prettytable import PrettyTable
 def tampilkan_pengguna():
     print("========== DATA PENGGUNA ==========")
 
+    tabel = PrettyTable()
+
+    tabel.field_names = [
+        "Nomor",
+        "Username",
+        "Role"
+    ]
+    
     if not akun:
         print("Belum ada data pengguna.")
         return
 
     for nomor, (username, data) in enumerate(akun.items(), start=1):
-        print("------------------------------------")
-        print("Nomor   :", nomor)
-        print("Username:", username)
-        print("Role    :", data["role"])
+        tabel.add_row([
+            nomor,
+            username,
+            data["role"]
+        ])
+
+    tabel.align = "l"
+    print(tabel)
+
 
 # Edit Data Pengguna
 def edit_pengguna(username_login):
