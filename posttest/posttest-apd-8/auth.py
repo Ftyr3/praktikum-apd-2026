@@ -1,3 +1,5 @@
+from data import akun
+
 def login():
     print("=== LOGIN ===")
     percobaan = 0
