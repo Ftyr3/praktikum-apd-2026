@@ -42,6 +42,7 @@ def register():
         }
 
         print("Registrasi berhasil. Silakan login.")
+        input("\nTekan Enter untuk melanjutkan...")
 
     except ValueError as error:
         print("Error:", error)
