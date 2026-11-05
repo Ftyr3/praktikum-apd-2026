@@ -2,6 +2,7 @@ from data import data_kendaraan
 from prettytable import PrettyTable
 from datetime import datetime
 
+id_berikutnya = 3
 
 
 def hitung_kendaraan():
