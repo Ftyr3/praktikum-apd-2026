@@ -23,9 +23,7 @@ def hitung_kendaraan_rekursif(daftar_id, indeks=0):
     if indeks >= len(daftar_id):
         return 0
 
-    return 1 + hitung_kendaraan_rekursif(
-        daftar_id, indeks + 1
-    )
+    return 1 + hitung_kendaraan_rekursif(daftar_id, indeks + 1)
 
 
 

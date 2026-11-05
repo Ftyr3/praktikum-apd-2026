@@ -106,9 +106,7 @@ def hapus_pengguna(username_login):
         if akun[target]["role"] == "Admin":
             raise ValueError("Akun Admin tidak boleh dihapus.")
 
-        konfirmasi = input(
-            f"Yakin hapus akun {target}? (y/n): "
-        ).strip().lower()
+        konfirmasi = input(f"Yakin hapus akun {target}? (y/n): ").strip().lower()
 
         if konfirmasi == "y":
             # Kendaraan milik akun tetap tersimpan.

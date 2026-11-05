@@ -1,18 +1,9 @@
 import os
 from auth import login, register
 
-from kendaraan import (
-    tambah_kendaraan,
-    tampilkan_kendaraan,
-    ubah_kendaraan,
-    hapus_kendaraan
-)
+from kendaraan import tambah_kendaraan, tampilkan_kendaraan, ubah_kendaraan, hapus_kendaraan
 
-from pengguna import (
-    tampilkan_pengguna,
-    edit_pengguna,
-    hapus_pengguna
-)
+from pengguna import tampilkan_pengguna, edit_pengguna, hapus_pengguna
 
 
 
